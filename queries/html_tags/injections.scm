@@ -76,18 +76,18 @@
   (#set! injection.language "javascript"))
 
 ; <element [attr]="value"> | <element [(value)]="value">
-; (attribute
-;   ((attribute_name) @_name
-;    (#lua-match? @_name "[%[%(].*[%)%]]"))
-;   (quoted_attribute_value
-;     (attribute_value) @injection.content)
-;   (#set! injection.language "angular"))
+(attribute
+  ((attribute_name) @_name
+   (#lua-match? @_name "[%[%(].*[%)%]]"))
+  (quoted_attribute_value
+    (attribute_value) @injection.content)
+  (#set! injection.language "angular"))
 ;
 ; ; <element *ngIf="value"> | <element *ngFor="value">
-; (attribute
-;   ((attribute_name) @_name
-;    (#lua-match? @_name "^%*"))
-;   (quoted_attribute_value
-;     ((attribute_value) @injection.content))
-;   (#set! injection.language "angular"))
+(attribute
+  ((attribute_name) @_name
+   (#lua-match? @_name "^%*"))
+  (quoted_attribute_value
+    ((attribute_value) @injection.content))
+  (#set! injection.language "angular"))
 
