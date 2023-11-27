@@ -21,8 +21,8 @@
   function: ((identifier) @function.builtin
     (#eq? @function.builtin "$any")))
 
-; (annotation) @punctuation.special
-;
+(annotation) @type
+
 [
   (control_flow_keyword)
   "let"
@@ -71,4 +71,7 @@
   "%"
 ] @operator
 
-(ternary_operator) @conditional.ternary
+[
+ (ternary_operator)
+ (conditional_operator)
+] @conditional.ternary
