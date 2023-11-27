@@ -29,16 +29,16 @@
 ;------ Angular queries ------
 
 ; {{ someBinding }}
-; ((text) @injection.content 
-;   (#lua-match? @injection.content "%{%{.+%}%}")
-;   (#set! injection.language "angular")
-; )
-;
-; ; }
-; ((text) @injection.content 
-;   (#lua-match? @injection.content "%}.*")
-;   (#set! injection.language "angular")
-; )
+((text) @injection.content 
+  (#lua-match? @injection.content "%{%{.+%}%}")
+  (#set! injection.language "angular")
+)
+
+; }
+((text) @injection.content 
+  (#lua-match? @injection.content "%}.*")
+  (#set! injection.language "angular")
+)
 ;
 ; ; Angular control flow statements
 ; ; @if (condition) {
