@@ -51,6 +51,7 @@
 ; ((identifier) @variable.builtin
 ;   (#vim-match? @variable.builtin "^(this|\$event|null)$"))
 ;
+;
 ; [
 ;   "-"
 ;   "&&"
