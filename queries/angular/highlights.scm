@@ -1,3 +1,5 @@
+; inherits: html
+
 (identifier) @variable
 (pipe_sequence "|" @operator)
 (string) @string
@@ -21,14 +23,14 @@
   function: ((identifier) @function.builtin
     (#eq? @function.builtin "$any")))
 
-(annotation) @type
+(if_statement "\@" @type)
 
 [
-  (control_flow_keyword)
+  (control_keyword)
   "let"
 ] @keyword
 
-(special_block_keyword) @type
+(special_keyword) @type
 
 [
   "("
