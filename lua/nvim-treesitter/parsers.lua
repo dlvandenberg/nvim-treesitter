@@ -98,8 +98,8 @@ list.angular = {
     url = "https://github.com/dlvandenberg/tree-sitter-angular",
     files = { "src/parser.c", "src/scanner.c" },
     generate_requires_npm = true,
+    requires_generate_from_grammar = false,
   },
-  filetype = "angular",
   maintainers = { "@dlvandenberg" },
   experimental = true,
 }
