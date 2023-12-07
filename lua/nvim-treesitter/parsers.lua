@@ -99,6 +99,7 @@ list.angular = {
     files = { "src/parser.c", "src/scanner.c" },
     generate_requires_npm = true,
   },
+  filetype = "angular",
   maintainers = { "@dlvandenberg" },
   experimental = true,
 }
