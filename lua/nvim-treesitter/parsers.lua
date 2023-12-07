@@ -97,6 +97,7 @@ list.angular = {
   install_info = {
     url = "https://github.com/dlvandenberg/tree-sitter-angular",
     files = { "src/parser.c", "src/scanner.c" },
+    generate_requires_npm = true,
   },
   maintainers = { "@dlvandenberg" },
   experimental = true,
