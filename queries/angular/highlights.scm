@@ -1,4 +1,4 @@
-; inherits: html
+; inherits: html_tags
 
 ; (identifier) @variable
 ; (pipe_sequence "|" @operator)
