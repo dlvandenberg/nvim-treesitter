@@ -67,6 +67,12 @@
   "}"
   "{{"
   "}}"
+  (if_end_expression)
+  (for_end_expression)
+  (switch_end_expression)
+  (case_end_expression)
+  (default_end_expression)
+  (defer_end_expression)
 ] @punctuation.bracket
 
 (start_tag
