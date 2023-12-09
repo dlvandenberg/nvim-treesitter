@@ -89,6 +89,8 @@
   "?."
 ] @punctuation.delimiter
 
+(interpolation ["+"] @operator)
+
 (binary_expression
   [
     "-"
