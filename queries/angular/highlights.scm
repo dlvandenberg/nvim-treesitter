@@ -65,6 +65,8 @@
   "]"
   "{"
   "}"
+  "{{"
+  "}}"
 ] @punctuation.bracket
 
 (start_tag
