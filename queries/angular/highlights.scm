@@ -1,4 +1,5 @@
 ; inherits: html_tags
+
 (identifier) @variable
 (pipe_operator) @operator
 (string) @string
@@ -8,6 +9,11 @@
  (pipe_call
    arguments: (pipe_arguments
                 (identifier) @parameter))
+
+(structural_directive
+  ["*"] @keyword
+  (identifier) @keyword
+)
 
 (binding_name
   (identifier) @keyword)
@@ -33,7 +39,7 @@
   key: ((identifier) @variable.builtin
   (#eq? @variable.builtin "$implicit")))
 
-(control_keyword) @keyword
+(control_keyword) @type.control
 (special_keyword) @type
 
 ((identifier) @boolean
