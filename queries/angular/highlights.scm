@@ -10,7 +10,7 @@
                 (identifier) @parameter))
 
 (binding_name
-  (identifier) @tag.attribute)
+  (identifier) @keyword)
 
 (event_binding
   (binding_name
@@ -57,6 +57,18 @@
   "}"
 ] @punctuation.bracket
 
+(start_tag
+  [ "<" ">" "/>"] @tag.delimiter
+)
+(self_closing_tag
+  [ "<" ">" "/>"] @tag.delimiter
+)
+(end_tag
+  [ "</" ">" ] @tag.delimiter
+)
+(erroneous_end_tag
+  [ "</" ">" ] @tag.delimiter
+)
 
 [
   ";"
