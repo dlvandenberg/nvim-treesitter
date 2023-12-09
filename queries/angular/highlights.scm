@@ -15,6 +15,10 @@
   (identifier) @keyword
 )
 
+(attribute
+  (attribute_name) @property
+  (#lua-match? @property "#.*"))
+
 (binding_name
   (identifier) @keyword)
 
