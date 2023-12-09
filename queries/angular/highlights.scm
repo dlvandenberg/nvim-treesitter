@@ -1,5 +1,4 @@
 ; inherits: html_tags
-
 (identifier) @variable
 (pipe_operator) @operator
 (string) @string
@@ -9,6 +8,13 @@
  (pipe_call
    arguments: (pipe_arguments
                 (identifier) @parameter))
+
+(binding_name
+  (identifier) @tag.attribute)
+
+(event_binding
+  (binding_name
+    (identifier) @event.name))
 
 (structural_assignment
   operator: (identifier) @keyword)
