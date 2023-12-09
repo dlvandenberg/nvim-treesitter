@@ -23,6 +23,10 @@
   function: ((identifier) @function.builtin
     (#eq? @function.builtin "$any")))
 
+(pair
+  key: ((identifier) @variable.builtin
+  (#eq? @variable.builtin "$implicit")))
+
 (control_keyword) @keyword
 (special_keyword) @type
 
@@ -38,22 +42,23 @@
 
 ;
 ; (if_statement "\@" @type)
-; [
-;   "("
-;   ")"
-;   "["
-;   "]"
-;   "{"
-;   "}"
-; ] @punctuation.bracket
-;
-; [
-;   ";"
-;   "."
-;   ","
-;   "?."
-; ] @punctuation.delimiter
-;
+[
+  "("
+  ")"
+  "["
+  "]"
+  "{"
+  "}"
+] @punctuation.bracket
+
+
+[
+  ";"
+  "."
+  ","
+  "?."
+] @punctuation.delimiter
+
 ;
 ; [
 ;   "-"
