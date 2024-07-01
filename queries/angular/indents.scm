@@ -33,6 +33,7 @@
 ] @indent.begin
 
 [
+ (if_end_expression)
  (else_if_statement)
  (else_statement)
 ] @indent.branch
