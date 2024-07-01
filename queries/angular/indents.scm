@@ -5,16 +5,17 @@
   (for_start_expression)
   (if_start_expression)
   (switch_start_expression)
-  (case_statement)
-  (default_statement)
+  (case_expression)
+  (default_expression)
 ] @indent.begin
 
 [
- (placeholder_statement)
- (loading_statement)
- (error_statement)
- (empty_statement)
- (else_if_statement)
+ (placeholder_expression)
+ (loading_expression)
+ (error_expression)
+ (empty_expression)
+ (else_if_expression)
+ (else_expression)
 ] @indent.branch
 
 [
@@ -25,3 +26,4 @@
  (default_end_expression)
  (switch_end_expression)
 ] @indent.end
+
