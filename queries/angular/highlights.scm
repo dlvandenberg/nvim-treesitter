@@ -6,7 +6,6 @@
 
 [
   (string)
-  (static_member_expression)
 ] @string
 
 (number) @number
