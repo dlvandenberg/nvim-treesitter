@@ -212,3 +212,43 @@
             (#set! injection.include-children)
             (#offset! @injection.content 0 1 0 -1)
             (#set! injection.language "css")))))))
+
+; @Component({
+;   host: {
+;     '<html>': '<ecma>',
+;   }
+; })
+(decorator
+  (call_expression
+    function: ((identifier) @_name
+      (#eq? @_name "Component"))
+    arguments: (arguments
+      (object
+        (pair
+          key: ((property_identifier) @_prop
+            (#eq? @_prop "host"))
+          value: (object
+                   (pair
+                     key: ((string) @injection.content
+                        (#offset! @injection.content 0 1 0 -1)
+                        (#set! injection.include-children)
+                        (#set! injection.language "html")
+                      )
+                     value: ((string) @injection.content
+                        (#offset! @injection.content 0 1 0 -1)
+                        (#set! injection.include-children)
+                        (#set! injection.language "emca")
+                      ))))))))
+
+              ; value: (object ; [29, 8] - [32, 3]
+              ;   (pair ; [30, 4] - [30, 36]
+              ;     key: (string ; [30, 4] - [30, 18]
+              ;       (string_fragment)) ; [30, 5] - [30, 17]
+              ;     value: (string ; [30, 20] - [30, 36]
+              ;       (string_fragment))) ; [30, 21] - [30, 35]
+              ;   (pair ; [31, 4] - [31, 36]
+              ;     key: (string ; [31, 4] - [31, 18]
+              ;       (string_fragment)) ; [31, 5] - [31, 17]
+              ;     value: (string ; [31, 20] - [31, 36]
+              ;       (string_fragment))))))))) ; [31, 21] - [31, 35]
+
