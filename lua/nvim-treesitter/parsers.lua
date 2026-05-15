@@ -18,7 +18,7 @@ return {
   },
   angular = {
     install_info = {
-      revision = 'a9539cc98015f167e6a5e73be900c0c7bfb80aca',
+      revision = 'cbdb9566fa201591878822e93076c6001acc4887',
       url = 'https://github.com/dlvandenberg/tree-sitter-angular',
     },
     maintainers = { '@dlvandenberg' },
